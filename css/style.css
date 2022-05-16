@@ -62,7 +62,7 @@ body {
   pointer-events: none;
 }
 
-.dropdown > .dropbutton:focus-within + .dropdown-menu,.dropdown-menu:focus-within {
+.dropdown.active > .dropbutton + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -85,7 +85,7 @@ body {
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown > .dropbutton:focus-within, .dropbutton:hover {
+.dropdown.active > .dropbutton, .dropbutton:hover {
   background-color:hsla(225, 40%, 18%,1);
   color: white;
   transition: all 150ms ease-in-out;
