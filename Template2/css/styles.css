@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    background-color: white;
+}
+
+.content {
+    width: 70%;
+    margin: 0 auto;
+    background-color: lightblue;
+}
+.topic_list {
+    list-style-type: none;
+}
+.items {
+    margin: 0;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+.items:nth-child(odd) {
+    background-color: navy;
+}
+
+.items:nth-child(even) {
+    background-color: aqua;
+}
