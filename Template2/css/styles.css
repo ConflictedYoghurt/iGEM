@@ -3,23 +3,61 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     background-color: white;
+    justify-content: center;
+}
+
+.sidebar {
+    display: block;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    justify-content: start;
+    box-sizing: border-box;
+    width: 15%;
+    margin: 0 0 auto 0;
+}
+
+.sidebar-head {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.sidebar-item, .sidebar-item>a {
+    background-color: cornflowerblue;
+    border-radius: 0 0.5rem 0.5rem 0;
+    text-decoration: none;
+    margin: 0 auto 2% 0;
 }
 
 .content {
     width: 70%;
-    margin: 0 auto;
+    margin: 0 auto auto 0;
+    box-sizing: border-box;
     background-color: lightblue;
+    text-align: center;
 }
-.topic_list {
+.topic-list {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 .items {
     margin: 0;
     padding: 0.3rem;
     border-radius: 0.5rem;
 }
+
+.items>p {
+    text-align: justify;
+}
+
 .items:nth-child(odd) {
     background-color: navy;
 }
