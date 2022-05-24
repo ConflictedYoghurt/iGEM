@@ -13,11 +13,11 @@ body {
 .sidebar {
     display: block;
     position: sticky;
+    width: 15%;
     position: -webkit-sticky;
     top: 0;
     justify-content: start;
     box-sizing: border-box;
-    width: 15%;
     margin: 0 0 auto 0;
 }
 
@@ -28,11 +28,15 @@ body {
     display: block;
 }
 
-.sidebar-item, .sidebar-item>a {
+.sidebar-item {
     background-color: cornflowerblue;
-    border-radius: 0 0.5rem 0.5rem 0;
-    text-decoration: none;
+    padding: 0.2rem;
+    border-radius: 0 0.2rem 0.2rem 0;
     margin: 0 auto 2% 0;
+}
+
+.sidebar-item>a {
+    text-decoration: none;
 }
 
 .content {
@@ -64,4 +68,12 @@ body {
 
 .items:nth-child(even) {
     background-color: aqua;
+}
+
+.more-info-content {
+    display: none;
+}
+
+.more-info:focus-within+.more-info-content {
+    display: block;
 }
