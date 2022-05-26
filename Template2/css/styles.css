@@ -13,12 +13,20 @@ body {
 .sidebar {
     display: block;
     position: sticky;
-    width: 15%;
+    width: 5%;
+    overflow: hidden;
     position: -webkit-sticky;
     top: 0;
     justify-content: start;
     box-sizing: border-box;
+    margin: 0 10% auto 0;
+}
+
+.sidebar:hover {
+    width: 15%;
+    overflow: auto;
     margin: 0 0 auto 0;
+    transition: all 0.15s ease-in-out;
 }
 
 .sidebar-head {
@@ -63,7 +71,7 @@ body {
 }
 
 .items:nth-child(odd) {
-    background-color: navy;
+    background-color: gray;
 }
 
 .items:nth-child(even) {
@@ -72,8 +80,11 @@ body {
 
 .more-info-content {
     display: none;
+    pointer-events: none;
 }
 
 .more-info:focus-within+.more-info-content {
     display: block;
+    pointer-events: auto;
+    transition: all 0.15s linear;
 }
