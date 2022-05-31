@@ -83,7 +83,7 @@ body {
     pointer-events: none;
 }
 
-.more-info:focus-within+.more-info-content {
+.more-info.active+.more-info-content {
     display: block;
     pointer-events: auto;
     transition: all 0.15s linear;
