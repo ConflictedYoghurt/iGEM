@@ -79,12 +79,21 @@ body {
 }
 
 .more-info-content {
-    display: none;
+    opacity: 0;
+    height: 0;
+    transform: translateY(-25%);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
     pointer-events: none;
 }
 
 .more-info.active+.more-info-content {
-    display: block;
+    opacity: 1;
+    height: fit-content;
+    transform: translateY(0);
+    margin: 1rem 0;
+    overflow: auto;
     pointer-events: auto;
-    transition: all 0.15s linear;
+    transition: all 0.1s ease-in-out;
 }

@@ -5,11 +5,9 @@ document.addEventListener('click', e => {
     let currentMoreinfo
     if (isMoreinfo){
         currentMoreinfo = e.target.closest("[data-more-info]")
-        currentMoreinfo.classList.toggle("active")
+        currentMoreinfo.classList.toggle("active")}
+    else if (isMoreinfo) {
+        currentMoreinfo = e.target.closest("[data-more-info].active")
+        currentMoreinfo.classList.remove("active")
     }
-
-    document.querySelectorAll("[data-more-info].active").forEach(moreinfo => {
-        if (moreinfo === currentMoreinfo) return
-        moreinfo.classList.remove("active")
-    })
 })
