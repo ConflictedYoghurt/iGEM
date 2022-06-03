@@ -8,6 +8,12 @@ body {
     width: 100%;
     background-color: white;
     justify-content: center;
+    font-family: 'Raleway', sans-serif;
+}
+.banner {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 .sidebar {
@@ -39,8 +45,9 @@ body {
 .sidebar-item {
     background-color: cornflowerblue;
     padding: 0.2rem;
-    border-radius: 0 0.2rem 0.2rem 0;
-    margin: 0 auto 2% 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 0 auto 0.25rem 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .sidebar-item>a {
@@ -60,6 +67,11 @@ body {
     padding: 0;
     display: block;
 }
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .items {
     margin: 0;
     padding: 0.3rem;
@@ -78,6 +90,17 @@ body {
     background-color: aqua;
 }
 
+.more-info {
+    color: black;
+    background: white;
+    -webkit-box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0,0,0,0.75);
+    box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0,0,0,0.75);
+    padding: 0.75rem;
+    border: unset;
+    border-radius: 0.75rem;
+    margin: 0 0 1rem 0;
+}
 .more-info-content {
     opacity: 0;
     height: 0;
@@ -86,13 +109,37 @@ body {
     margin: 0;
     overflow: hidden;
     pointer-events: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-info-content img {
+    max-width: 50%;
+    max-height: 50%;
+}
+.more-info-content p {
+    max-width: 50%;
+}
+.more-info.active, .more-info:hover {
+    color: white;
+    background: hsla(225, 40%, 18%,1);
+    padding: 0.75rem;
+    border: unset;
+    border-radius: 0.75rem;
+    -webkit-box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0,0,0,0.75);
+    box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0,0,0,0.75);
+    transition: all 0.15s ease-in-out;
 }
 
 .more-info.active+.more-info-content {
     opacity: 1;
     height: fit-content;
     transform: translateY(0);
-    margin: 1rem 0;
+    margin: 0;
     overflow: auto;
     pointer-events: auto;
     transition: all 0.1s ease-in-out;
