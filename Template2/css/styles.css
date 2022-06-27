@@ -75,7 +75,7 @@ p {
 .items {
     margin: 0;
     padding: 0.3rem;
-    border-radius: 0.5rem;
+    border-radius: 0rem;
 }
 
 .items>p {
@@ -84,10 +84,22 @@ p {
 
 .items:nth-child(odd) {
     background-color: gray;
+    border: solid red;
+    border-width: 0.1rem 0.1rem 0.05rem 0;
+}
+
+.items:nth-child(odd) img {
+    float: right;
 }
 
 .items:nth-child(even) {
-    background-color: aqua;
+    background-color: paleturquoise;
+    border: solid red;
+    border-width: 0.05rem 0 0 0.1rem;
+}
+
+.items:nth-child(even) img {
+    float: left;
 }
 
 .more-info {
