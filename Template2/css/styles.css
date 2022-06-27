@@ -22,7 +22,7 @@ body {
     width: 5%;
     overflow: hidden;
     position: -webkit-sticky;
-    top: 0;
+    top: 20%;
     justify-content: start;
     box-sizing: border-box;
     margin: 0 10% auto 0;
