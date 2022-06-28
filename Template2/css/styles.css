@@ -21,11 +21,62 @@ body {
     position: sticky;
     width: 5%;
     overflow: hidden;
-    position: -webkit-sticky;
     top: 20%;
     justify-content: start;
     box-sizing: border-box;
     margin: 0 10% auto 0;
+    opacity: 0;
+}
+
+.fadeIn {
+    -webkit-animation: fadeIn 1s both;
+    -moz-animation: fadeIn 1s both;
+    -o-animation: fadeIn 1s both;
+    animation: fadeIn 1s both;
+}
+
+@-webkit-keyframes fadeIn {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0%{
+        opacity: 0;
+        -moz-transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        -moz-transform: translateX(0%);
+    }
+}
+
+@-o-keyframes fadeIn {
+    0%{
+        opacity: 0;
+        -o-transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        -o-transform: translateX(0%);
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
 .sidebar:hover {

@@ -11,3 +11,13 @@ document.addEventListener('click', e => {
         currentMoreinfo.classList.remove("active")
     }
 })
+
+const observer = new IntersectionObserver(entries =>{
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            document.querySelectorAll(".sidebar")[0].classList.add("fadeIn");
+        }
+    })
+})
+
+observer.observe(document.querySelectorAll(".items")[3]);

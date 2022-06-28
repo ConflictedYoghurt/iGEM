@@ -2,6 +2,10 @@ body {
   margin:0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   width: 100%;
   padding: 0;
@@ -15,17 +19,31 @@ body {
 }
 
 .logo {
-  width: 10%;
+  width: 20%;
   padding: 0;
   margin:0 0 0 1%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 .logo img {
+  display: flex;
   width: 3.125rem;
   height: 3.125rem;
 }
 
+.team-name {
+  background-color: #fff;
+  color: black;
+  padding: .8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.625rem;
+  cursor: pointer;
+}
+
 .menu {
-  width: 90%;
+  width: 80%;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -41,6 +59,10 @@ body {
   border: none;
   border-radius: 0.625rem;
   cursor: pointer;
+}
+.dropbutton a {
+  color: black;
+  background-color: white;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -62,6 +84,10 @@ body {
   pointer-events: none;
 }
 
+.dropdown:last-child > .dropdown-menu {
+  right: 0%;
+}
+
 .dropdown.active > .dropbutton + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
@@ -73,7 +99,6 @@ body {
 .dropdown-menu a {
   color: black;
   padding: 0.75rem 1rem;
-  text-decoration: none;
   display: block;
 }
 
@@ -85,7 +110,7 @@ body {
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown.active > .dropbutton, .dropbutton:hover {
+.dropdown.active > .dropbutton, .dropbutton:hover, .dropbutton:hover>a {
   background-color:hsla(225, 40%, 18%,1);
   color: white;
   transition: all 150ms ease-in-out;
