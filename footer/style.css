@@ -16,15 +16,29 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 }
+
+.row:nth-child(-n+3) {
+	justify-content: center;
+	align-items: center;
+}
+.row:last-child {
+	justify-content: space-between;
+}
 .sponsors{
 	margin-bottom: 20px;
 }
 .sponsors h2{
 	text-align: center;
 }
-.sponsors img{
-	width: 200px;
+
+.sponsor-images {
+	padding: 0.75rem;
+	width: 20%;
+}
+
+.sponsor-images img{
 	height: auto;
+	width: 100%;
 }
 .sponsors a{
 	text-decoration: none;
