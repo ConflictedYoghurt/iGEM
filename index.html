@@ -13,24 +13,23 @@
 <nav>
 	<div class="header">
 		<div class="logo">
-			<a href="{{ url_for('index') }}"><img src="img/Logos-03.png"></a>
+			<a href="{{ url_for('index') }}"><img src="https://static.igem.wiki/teams/4247/wiki/logos-03.png"></a>
 			<a class="team-name" href="{{ url_for('index') }}">UCopenhagen</a>
 		</div>
-		<nav class="menu">
-			<div class="dropdown">
-				<button class="dropbutton"><a href="{{ url_for('index') }}">Home</a></button>
-			</div>
-			<div class="dropdown" data-dropdown>
-				<button class="dropbutton" data-dropdown-button><a href="{{ url_for('pages', page='team') }}">Team</a>&nbsp<i class="bi bi-caret-down-fill" style="font-size:0.8rem"></i></button>
-				<div class="dropdown-menu">
+		<div class="nav-icon"><a href="javascript:void(0);" style="font-size:30px; margin: 0.5rem 0.5rem auto auto; color: hsla(225, 40%, 18%,1);" onclick="myFunction()"><i class="bi bi-list"></i></a></div>
+		<nav class="menu" id="ourmenu">
+			<a href="{{ url_for('index') }}"><button class="dropbutton">Home</button></a>
+			<div class="dropdowns" data-dropdown>
+				<button class="dropbutton" data-dropdown-button>Team&nbsp<i class="bi bi-caret-down-fill" style="font-size:0.8rem"></i></button>
+				<div class="dropdown-menus">
 					<a href="{{ url_for('pages', page='team') }}">Team</a>
 					<a href="{{ url_for('pages', page='attributions') }}">Attributions</a>
 					<a href="{{ url_for('pages', page='collaborations') }}">Collaborations</a>
 				</div>
 			</div>
-			<div class="dropdown" data-dropdown>
+			<div class="dropdowns" data-dropdown>
 				<button class="dropbutton" data-dropdown-button>Project&nbsp<i class="bi bi-caret-down-fill" style="font-size:0.8rem"></i></button>
-				<div class="dropdown-menu">
+				<div class="dropdown-menus">
 					<a href="{{ url_for('pages', page='communication') }}">Communication</a>
 					<a href="{{ url_for('pages', page='contribution') }}">Contribution</a>
 					<a href="{{ url_for('pages', page='description') }}">Description</a>
@@ -43,23 +42,19 @@
 					<a href="{{ url_for('pages', page='results') }}">Results</a>
 				</div>
 			</div>
-			<div class="dropdown" data-dropdown>
+			<div class="dropdowns" data-dropdown>
 				<button class="dropbutton" data-dropdown-button>Parts&nbsp<i class="bi bi-caret-down-fill" style="font-size:0.8rem"></i></button>
-				<div class="dropdown-menu">
+				<div class="dropdown-menus">
 					<a href="{{ url_for('pages', page='part-collection') }}">Part Collection</a>
 					<a href="{{ url_for('pages', page='parts') }}">Parts</a>
 					<a href="{{ url_for('pages', page='improve') }}">Improvement</a>
 				</div>
 			</div>
-			<div class="dropdown">
-				<button class="dropbutton"><a href="{{ url_for('pages', page='safety') }}">Safety</a></button>
-			</div>
-			<div class="dropdown" data-dropdown>
-				<button class="dropbutton" data-dropdown-button><a href="{{ url_for('pages', page='human-practices') }}">Human Practices</a></button>
-			</div>
-			<div class="dropdown" data-dropdown>
+			<a href="{{ url_for('pages', page='safety') }}"><button class="dropbutton">Safety</button></a>
+			<a href="{{ url_for('pages', page='human-practices') }}"><button class="dropbutton" data-dropdown-button>Human Practices</button></a>
+			<div class="dropdowns" data-dropdown>
 				<button class="dropbutton" data-dropdown-button>Awards&nbsp<i class="bi bi-caret-down-fill" style="font-size:0.8rem"></i></button>
-				<div class="dropdown-menu">
+				<div class="dropdown-menus">
 					<a href="{{ url_for('pages', page='education') }}">Education</a>
 					<a href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a>
 					<a href="{{ url_for('pages', page='hardware') }}">Hardware</a>

@@ -1,8 +1,92 @@
 body {
     margin: 0;
 }
-
-img {
+.team-picture {
+    line-height: 0;
+    position: relative;
+}
+.team-picture img {
     width: 100%;
     margin: 0;
+}
+.face-link {
+    height:100%;
+    width: 100%;
+    border-radius: 50%;
+    display: inline-block;
+}
+.team-picture > a {
+    position: absolute;
+    width: 10%;
+    height: 25%;
+}
+
+.team-position {
+    margin: 2vw 25vw 2vw 25vw;
+    text-align: center;
+}
+
+.team-position h1{
+    color: rgb(222, 181, 250);
+    font-size: 3rem;
+}
+
+.team-position p{
+    color: rgba(0, 0, 0, 0.586);
+    font-size: 2rem;
+    justify-content: space-evenly;
+}
+
+.team-content-container {
+    max-width:70%;
+    margin: 0 auto;
+}
+
+.persons>img {
+    min-width: 300px;
+    max-width: 50%;
+}
+
+.persons:nth-child(odd) {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+    flex: 1 0 0;
+}
+
+.persons:nth-child(even) {
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    flex: 1 0 0;
+}
+
+.member-name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.member-name p{
+    font-size: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.member-name>h1 {
+    font-size: 2rem;
+    color: rgba(43, 61, 251, 0.276);
+    text-align: center;
+    width: 100%;
 }

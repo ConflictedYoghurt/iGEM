@@ -12,3 +12,12 @@ document.addEventListener('click', e => {
         dropdown.classList.remove("active")
     })
 })
+
+function myFunction() {
+    var x = document.getElementById("ourmenu");
+    if (x.className === "menu") {
+      x.className += " responsive";
+    } else {
+      x.className = "menu";
+    }
+  }
